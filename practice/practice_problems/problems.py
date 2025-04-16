@@ -2,8 +2,7 @@
 def getSum(a: int, b: int):
     return a + b
 
-
-# Problem one result
+    # Problem one result
     print(f"One: " + str(getSum(2, 10)))
 
 

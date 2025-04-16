@@ -1,5 +1,6 @@
 from collections import deque
 
+
 def breadth_first_search(graph, source):
     for vertex in graph:
         vertex.distance = float("inf")
@@ -17,6 +18,7 @@ def breadth_first_search(graph, source):
                 neighbor.distance = current_vertex.distance + 1
                 neighbor.previous = current_vertex
                 bfs_queue.append(neighbor)
+
 
 def print_path(graph, source, vertex):
     if vertex == source:
