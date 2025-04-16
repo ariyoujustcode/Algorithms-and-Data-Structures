@@ -17,3 +17,14 @@ def breadth_first_search(graph, source):
                 neighbor.distance = current_vertex.distance + 1
                 neighbor.previous = current_vertex
                 bfs_queue.append(neighbor)
+
+def print_path(graph, source, vertex):
+    if vertex == source:
+        print(source, end="")
+
+    elif vertex.previous == None:
+        print("No path from source to vertex.")
+
+    else:
+        print_path(graph, source, vertex.previous)
+        print(" ->", vertex, end="")
