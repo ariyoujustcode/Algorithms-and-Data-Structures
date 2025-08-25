@@ -262,19 +262,6 @@ def valid_parentheses(s: str) -> bool:
     return not stack
 
 
-# String
-def longest_common_prefix(strs: list[str]) -> str:
-    if not strs:
-        return ""
-    prefix = strs[0]
-    for s in strs[1:]:
-        while not s.startswith(prefix):
-            prefix = prefix[:-1]
-            if not prefix:
-                return ""
-    return prefix
-
-
 # Math
 def single_number(nums: list[int]) -> int:
     result = 0
