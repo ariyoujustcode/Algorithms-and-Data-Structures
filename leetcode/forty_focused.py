@@ -1,15 +1,5 @@
 # LeetCode problem solutions
 # Arrays and Hashmaps
-def two_sum(nums: list[int], target: int) -> list[int]:
-    num_to_index = {}
-    for index, num in enumerate(nums):
-        complement = target - num
-        if complement in num_to_index:
-            return [num_to_index[complement], index]
-        num_to_index[num] = index
-    return []
-
-
 def best_time_to_buy_and_sell_stock(prices: list[int]) -> int:
     min_price = float("inf")
     max_profit = 0
